@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Форма обратной связи на PHP с отправкой на почту</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Форма обратной связи на PHP</h2>
-  <!--Данные введенные пользователем обрабатываются кодом в mail.php-->
-  <form action="./mail.php" method="post">
-  <!--Тег используется для группировки связанных элементов в форме-->
-  <fieldset>
-  <!--Тег задает заголовок для групповых элементов-->
-  <legend>Оставьте сообщение:</legend>
-  Ваше имя:
-  <!--Устанавливает однострочное текстовое поле ввода:-->
-  <input type="text" name="name">
-  <!--Используется для полей ввода, которые должны содержать адрес электронной почты.-->
-  E-mail:
-  <input type="text" name="email">
-  Номер телефона:
-  <input type="text" name="phone">
-  Сообщение:
-  <!--Тег разрешает многострочный ввод текста.-->
-    Текстовая область может содержать неограниченное количество символов-->
-  <textarea rows="10" cols="45" name="message"></textarea>
-  <!--Устанавливает кнопку для отправки данных формы в обработчик формы.-->
-  <input type="submit" value="Отправить сообщение">
-  </fieldset>
-  </form>
+    <div class="calc">
+        <div class="calc-screen">
+            <p>0</p>
+        </div>
+        <div class="buttons">
+            <div class="btn ac bg-grey">ac</div>
+            <div class="btn plus-minus bg-grey">+/-</div>
+            <div class="btn percent bg-grey">%</div>
+            <div class="btn division bg-orange">/</div>
+
+            <div class="btn seven">7</div>
+            <div class="btn eight">8</div>
+            <div class="btn nine">9</div>
+            <div class="btn myltiply bg-orange">X</div>
+
+            <div class="btn four">4</div>
+            <div class="btn five">5</div>
+            <div class="btn six">6</div>
+            <div class="btn minus bg-orange">-</div>
+
+            <div class="btn one">1</div>
+            <div class="btn two">2</div>
+            <div class="btn three">3</div>
+            <div class="btn plus bg-orange">+</div>
+
+            <div class="btn zero">0</div>
+            <div class="btn dot">.</div>
+            <div class="btn equal bg-orange">=</div>
+        </div>
+    </div>
+	<script src="./calc.js"></script>
+
 </body>
 </html>
