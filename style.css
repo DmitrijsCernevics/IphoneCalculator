@@ -23,6 +23,7 @@ body {
   padding: 20px;
   position: relative;
   width: 563px;
+  box-shadow: 40px 40px 40px #a6a6a6;
 }
 
 .top-container {
