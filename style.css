@@ -1,75 +1,95 @@
-.calc {
-    margin: 50px auto;
-    width: 300px;  
-    height: 500px;
-    border:1px solid #000;
-    border-radius: 20px;
-    background: #000;
-    color: #fff;
-    font-family: Arial;
-    padding:18px;
-    box-shadow: 40px 40px 40px #a6a6a6;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
-/* Экран ввода */
-.calc-screen {
-    height: 125px;
-    padding: 10px;
-    display: grid;
-    justify-items: end;
-    align-items: end;
-    margin-bottom: 25px;
-}
-.calc-screen p {
-    text-align: right;
-    font-size: 4rem;
-    margin: 0;
+body {
+  display:flex;
+  justify-content: center;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 25px;
+  transform: scale(0.6);
+  position: absolute;
+  top: -25%;
 }
 
-/* Блок в который обёрнуты все кнопки */
-.buttons {
-    display: grid;
-    grid-template-areas:
-    "ac plus-minus percent division"
-    "seven eight nine multi"
-    "four five six minus"
-    "one two three plus"
-    "zero zero dot equal";
-    grid-gap: 7px;
-    justify-items: center;
+.calculator {
+  background: black;
+  border-radius: 50px;
+  color: white;
+  height: 1218px;
+  padding: 20px;
+  position: relative;
+  width: 563px;
 }
 
-.btn {
-    width: 60px;
-    height: 60px;
-    background: #333;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 60px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    user-select: none;
+.top-container {
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.btn.zero {
-    grid-area: zero;
-    width: 100%;
-    border-radius: 34px;
+.value {
+  font-size: 130px;
+  font-weight: 300;
+  height: 158px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: right;
 }
 
-/* Яркость при навидении */
-.btn:hover {
-    filter: brightness(120%)
-}
-/* Яркость при нажатии */
-.btn:active {
-    filter: brightness(90%)
+.buttons-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
-.btn.bg-grey {
-    background: #a6a6a6;
+.button {
+  align-items: center;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 45px;
+  height: 110px;
+  justify-content: center;
+  transition: filter .3s;
+  width: 110px;
 }
 
-.btn.bg-orange {
-    background: #ff9501;
+.button.function {
+  color: black;
+  background: #a5a5a5;
+}
+
+.button.operator {
+  background: #f1a33c;
+}
+
+.button.number-0 {
+  border-radius: 55px;
+  grid-column: 1 / span 2;
+  justify-content: flex-start;
+  padding-left: 43px;
+  width: 250px;
+}
+
+.button:active,
+.button:focus {
+  filter: brightness(120%);
+}
+
+.bottom {
+  width: 200px;
+  height: 5px;
+  background: white;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
